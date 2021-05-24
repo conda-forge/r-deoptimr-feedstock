@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: DEoptimR_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/DEoptimR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DEoptimR/DEoptimR_{{ version }}.tar.gz
@@ -36,19 +35,13 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=DEoptimR
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Differential Evolution (DE) stochastic algorithms for global optimization of problems with and without constraints. The aim is to curate a collection of its state-of-the-art variants that (1) do not sacrifice simplicity of design, (2) are essentially tuning-free, and (3) can be efficiently implemented directly
     in the R language. Currently, it only provides an implementation of the 'jDE' algorithm by Brest et al. (2006) <doi:10.1109/TEVC.2006.872133>.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3  # [unix]
-  license_file: {{ environ["PREFIX"] }}\R\share\licenses\GPL-3  # [win]
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
