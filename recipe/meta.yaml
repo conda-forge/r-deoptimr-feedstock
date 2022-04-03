@@ -1,4 +1,4 @@
-{% set version = "1.0-10" %}
+{% set version = "1.0-11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DEoptimR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DEoptimR/DEoptimR_{{ version }}.tar.gz
-  sha256: 774f7ba0ac9c73aaab4567024b98afdb58098905726e72bceeeb9e380e782ad5
+  sha256: 1874b30f4b75f9bfa891986598f1ebe1fce27fdced14f8f417d3535cac08165b
 
 build:
   noarch: generic
