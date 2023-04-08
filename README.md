@@ -1,11 +1,11 @@
-About r-deoptimr
-================
+About r-deoptimr-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-deoptimr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=DEoptimR
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-deoptimr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Differential Evolution (DE) stochastic algorithms for global optimization of problems with and without constraints. The aim is to curate a collection of its state-of-the-art variants that (1) do not sacrifice simplicity of design, (2) are essentially tuning-free, and (3) can be efficiently implemented directly in the R language. Currently, it only provides an implementation of the 'jDE' algorithm by Brest et al. (2006) <doi:10.1109/TEVC.2006.872133>.
 
