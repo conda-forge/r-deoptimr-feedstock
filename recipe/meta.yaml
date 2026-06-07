@@ -1,4 +1,4 @@
-{% set version = "1.1-4" %}
+{% set version = "1.2-0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DEoptimR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DEoptimR/DEoptimR_{{ version }}.tar.gz
-  sha256: 5a1bdd10d6f75e77e91bed0568e7be9f08dd2996a0b2ca2b3c80a71626e602a2
+  sha256: e725f9a49124fe63f7deb57db376efa092cfbe3a1554d9648af84bc31f1c1aa8
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,8 +34,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=DEoptimR
   license: GPL-2.0-or-later
-  summary: Differential Evolution (DE) stochastic algorithms for global optimization of problems with and without constraints. The aim is to curate a collection of its state-of-the-art variants that (1) do not sacrifice simplicity of design, (2) are essentially tuning-free, and (3) can be efficiently implemented directly
-    in the R language. Currently, it only provides an implementation of the 'jDE' algorithm by Brest et al. (2006) <doi:10.1109/TEVC.2006.872133>.
+  summary: Differential Evolution (DE) stochastic algorithms for global optimization of problems with and without constraints. The aim is to curate a collection of its state-of-the-art variants that (1) do not sacrifice simplicity of design, (2) are essentially tuning-free, and (3) can be efficiently implemented 
+    directly in the R language. Currently, it only provides an implementation of the 'jDE' algorithm by Brest et al. (2006) <doi:10.1109/TEVC.2006.872133>.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
