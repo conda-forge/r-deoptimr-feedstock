@@ -1,15 +1,15 @@
-{% set version = "1.2-0" %}
+{% set version = "1.2-1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-deoptimr
-  version: "{{ version|replace("-", "_") }}"
+  version: "{{ version|replace('-', '_') }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/DEoptimR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DEoptimR/DEoptimR_{{ version }}.tar.gz
-  sha256: e725f9a49124fe63f7deb57db376efa092cfbe3a1554d9648af84bc31f1c1aa8
+  sha256: 18540c8717c7607c0e6979b1c4e7e90d74174c1d69ed6cde595f7a764f15a2a2
 
 build:
   noarch: generic
@@ -39,14 +39,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=DEoptimR
   license: GPL-2.0-or-later
-  summary: Differential Evolution (DE) stochastic heuristic algorithms for global optimization
-    of problems with and without general constraints. The aim is to curate a collection
-    of its variants that (1) do not sacrifice simplicity of design, (2) are essentially
-    tuning-free, and (3) can be efficiently implemented directly in the R language.
-    Currently, it provides implementations of the algorithms 'jDE' by Brest et al. (2006)
-    <doi:10.1109/TEVC.2006.872133> for single-objective optimization and 'NCDE' by Qu
-    et al. (2012) <doi:10.1109/TEVC.2011.2161873> for multimodal optimization (single-objective
-    problems with multiple solutions).
+  summary: Differential Evolution (DE) stochastic heuristic algorithms for global optimization of problems with and without general constraints. The aim is to curate a collection of its variants that (1) do not sacrifice simplicity of design, (2) are essentially tuning-free, and (3) can be efficiently implemented 
+    directly in the R language. Currently, it provides implementations of the algorithms 'jDE' by Brest et al. (2006) <doi:10.1109/TEVC.2006.872133> for single-objective optimization and 'NCDE' by Qu et al. (2012) <doi:10.1109/TEVC.2011.2161873> for multimodal optimization (single-objective problems with multiple 
+    solutions).
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
