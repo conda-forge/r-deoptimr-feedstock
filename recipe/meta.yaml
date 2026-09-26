@@ -1,15 +1,15 @@
-{% set version = "1.2-1" %}
+{% set version = "1.2-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-deoptimr
-  version: "{{ version|replace('-', '_') }}"
+  version: {{ version|replace('-', '_') }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/DEoptimR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DEoptimR/DEoptimR_{{ version }}.tar.gz
-  sha256: 18540c8717c7607c0e6979b1c4e7e90d74174c1d69ed6cde595f7a764f15a2a2
+  sha256: d121f283396a90bbdfd7ebcaeb34b6153d36475a1bfbf91d9415c7353fb251de
 
 build:
   noarch: generic
